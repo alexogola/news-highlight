@@ -19,7 +19,7 @@ def index():
     cat_health = get_sources('health')
 
     title = 'Home | Best News Update Site'
-
+    
     return render_template('index.html',title=title, general=cat_general, business = cat_business, entertainment = cat_entertainment, sports = cat_sports, tech = cat_tech, science = cat_science, health = cat_health)
 
 @main.route('/articles/<source_id>&<int:per_page>')
@@ -51,7 +51,7 @@ def all_news(per_page):
     # per_page = 40
     everything_news = everything(per_page)
     title = 'All News'
-
+    
     search_articles = request.args.get('search_query')
 
     if search_articles:

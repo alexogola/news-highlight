@@ -1,7 +1,6 @@
-from app import app
-import urllib.request,json
-from .models import articles
-from .models import sources
+import urllib.request, json
+from .models import Sources,Articles
+from datetime import datetime
 
 api_key = None
 sources_url = None
@@ -34,7 +33,7 @@ def get_sources(category):
 
         if get_sources_response['sources']:
             sources_results = process_results(get_sources_response['sources'])
-
+    
     return sources_results
 
 def process_results(sources_list):
@@ -54,7 +53,7 @@ def process_results(sources_list):
         if url:
             source_object = Sources(id,name,description,url,category,country)
             sources_results.append(source_object)
-
+    
     return sources_results
 
 def get_articles(source_id,limit):
@@ -71,7 +70,7 @@ def get_articles(source_id,limit):
 
         if articles_location_response['articles']:
             articles_location_results = process_articles(articles_location_response['articles'])
-
+        
     return articles_location_results
 
 def process_articles(my_articles):
@@ -79,7 +78,7 @@ def process_articles(my_articles):
     Function that processes the json results for the articles
     '''
     article_location_list = []
-
+    
     for article in my_articles:
         author = article.get('author')
         title = article.get('title')
@@ -93,7 +92,7 @@ def process_articles(my_articles):
         if urlToImage:
             article_source_object = Articles(author,title,description,url,urlToImage,publishedAt)
             article_location_list.append(article_source_object)
-
+        
     return article_location_list
 
 def topheadlines(limit):
@@ -110,7 +109,7 @@ def topheadlines(limit):
 
         if topheadlines_response['articles']:
             topheadlines_results = process_articles(topheadlines_response['articles'])
-
+        
     return topheadlines_results
 
 def everything(limit):
@@ -127,7 +126,7 @@ def everything(limit):
 
         if everything_response['articles']:
             everything_results = process_articles(everything_response['articles'])
-
+        
     return everything_results
 
 def search_everything(limit,query):
@@ -143,5 +142,5 @@ def search_everything(limit,query):
 
         if search_everything_response['articles']:
             search_everything_results = process_articles(search_everything_response['articles'])
-
+    
     return search_everything_results

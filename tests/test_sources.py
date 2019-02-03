@@ -1,16 +1,16 @@
 import unittest
-from sources import Sources
+from app.models import Sources
 
 class SourcesTest(unittest.TestCase):
     '''
-    Test Class to test the behaviour of the Sources class
+    Test case to test the behavior of the Sources class
     '''
     def setUp(self):
         '''
-        Set up method that will run before every Test
+        Setup function that will run before every test
         '''
         self.new_source = Sources('mynews','My News','We have the latest updates','https://google.com','general','ke')
-
+    
     def test_instance(self):
         self.assertTrue(isinstance(self.new_source,Sources))
 
