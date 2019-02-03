@@ -1,2 +1,3 @@
-export NEWS_API_KEY='<YourApiKey>'
-python3 manage.py server
+export NEWS_API_KEY=094c0e94d5cb4a76ae31280fb7164763
+
+./manager.py server
