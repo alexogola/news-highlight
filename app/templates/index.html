@@ -10,6 +10,7 @@
     </div>
 </div>
 <div class="container">
+  <div class="middle">
     <hr>
     <div class="row">
         <div class="col-md-12 categories">
@@ -18,14 +19,14 @@
         {{macro.displaySourceList(general)}}
     </div>
     <hr>
-    <div class="row" id="business">
+    <div class="row" id="entertainment">
         <div class="col-md-12 categories">
-            <h2 style="padding-bottom:20px; text-decoration: underline;">Business News</h2>
+            <h2 style="padding-bottom:20px; text-decoration: underline;">Entertainment News</h2>
         </div>
-        {{macro.displaySourceList(business)}}
+        {{macro.displaySourceList(entertainment)}}
     </div>
     <hr>
-    <div class="row" id="entertainment">
+    <div class="row" id="technology">
         <div class="col-md-12 categories">
             <h2 style="padding-bottom:20px; text-decoration: underline;">Technology News</h2>
         </div>
@@ -39,25 +40,6 @@
         {{macro.displaySourceList(sports)}}
     </div>
     <hr>
-    <div class="row" id="tech">
-        <div class="col-md-12 categories">
-            <h2 style="padding-bottom:20px; text-decoration: underline;">Health News</h2>
-        </div>
-        {{macro.displaySourceList(health)}}
-    </div>
-    <hr>
-    <div class="row" id="science">
-        <div class="col-md-12 categories">
-            <h2 style="padding-bottom:20px; text-decoration: underline;">Science News</h2>
-        </div>
-        {{macro.displaySourceList(science)}}
-    </div>
-    <hr>
-    <div class="row" id="health">
-        <div class="col-md-12 categories">
-            <h2 style="padding-bottom:20px; text-decoration: underline;">Entertainment News</h2>
-        </div>
-        {{macro.displaySourceList(entertainment)}}
     </div>
 </div>
 {% endblock%}

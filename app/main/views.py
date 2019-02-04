@@ -24,7 +24,7 @@ def index():
     health_list = get_sources('us', 'health')
     science_list = get_sources('us', 'science')
     entertainment_list = get_sources('us', 'entertainment')
-    test_args = 'Working!'
+    test_args = 'News'
     return render_template('index.html',
                            test_param=test_args,
                            general=general_list,
