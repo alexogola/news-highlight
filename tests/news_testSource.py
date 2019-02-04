@@ -1,30 +1,26 @@
-#!/usr/bin/env python3.6
 import unittest
-from app.models import Source
-# Source = news_source.Source
+from app.models import Sources
 
-
-class NewsSource(unittest.TestCase):
-    """
-    Test Class to test the behaviours we expect in our applications
-    """
-
+class SourcesTest(unittest.TestCase):
+    '''
+    Test case to test the behavior of the Sources class
+    '''
     def setUp(self):
-        """
-        This will function runs before every Test. Its a
-        built in unittest function that allows us to test our object.
-        """
-
-        self.new_source = Source("abc-news",
-                                 "ABC News",
-                                 "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.",
-                                 "http://abcnews.go.com",
-                                 "general",
-                                 "country")
+        '''
+        Setup function that will run before every test
+        '''
+        self.new_source = Sources('mynews','My News','We have the latest updates','https://google.com','general','ke')
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_source, Source))
+        self.assertTrue(isinstance(self.new_source,Sources))
 
-
-# if __name__ == '__main__':
-#     unittest.main()
+    def test_to_check_instance_variables(self):
+        '''
+        Test function to check instance variables
+        '''
+        self.assertEquals(self.new_source.id,'mynews')
+        self.assertEquals(self.new_source.name,'My News')
+        self.assertEquals(self.new_source.description,'We have the latest updates')
+        self.assertEquals(self.new_source.url,'https://google.com')
+        self.assertEquals(self.new_source.category,'general')
+        self.assertEquals(self.new_source.country,'ke')

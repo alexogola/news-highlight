@@ -1,8 +1,92 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand');
-
-h3{
-  font-family: 'Josefin Sans', sans-serif;
+#navMain {
+    font-family: 'Anton', sans-serif;
+    font-size: 100%;
+    text-transform: uppercase;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #000000;
 }
-*{
-  font-family: 'Quicksand', sans-serif;
+
+.heading {
+    text-align: center;
+    font-family: 'Allura';
+    background-color: #222;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-size: 70px;
+    word-wrap: break-word;
+    color: white;
+}
+
+.categories {
+    text-align: center;
+    margin-top: 2rem;
+}
+.categories h2{
+    font-family: 'Anton', sans-serif;
+}
+.single-source {
+    box-shadow: 2px 4px 12px 2px #DCDCDC;
+    margin: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.source-name {
+    text-align: right;
+}
+
+.source-details {
+    border-left: 1px solid rgba(88, 88, 88, 0.548)
+}
+
+.articles-details img {
+    max-width: 100%;
+}
+
+.articles-details {
+    box-shadow: 2px 4px 12px 2px #DCDCDC;
+    margin: 1rem;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.words {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.words p{
+    font-family: 'Mallanna';
+}
+img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+.small{
+    margin-bottom: 0
+}
+h3{
+    font-family: 'Anton', sans-serif;
+    word-wrap: break-word;
+}
+h4{
+    font-family: 'Anton', sans-serif;
+}
+p{
+    word-wrap: break-word;
+}
+.heading #search{
+    margin-top: 25rem;
 }
